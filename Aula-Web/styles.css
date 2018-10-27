@@ -1,0 +1,13 @@
+.first {
+	font-weight: bold;
+}
+.done {
+	text-decoration: line-through;
+}
+.second {
+	font-weight: inherit;
+}
+.third {
+	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 2em;
+}
