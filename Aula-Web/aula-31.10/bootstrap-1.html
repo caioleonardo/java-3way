@@ -1,0 +1,38 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	</head>
+	<body>
+		<div class="col-sm-6">
+		<div class="panel panel-primary">
+		<div class="panel-heading">Cadastro</div>
+		<div class="panel-body">
+			<form method="post" action="Editarclienteacao=cadastrar">
+				<div class="row">
+					<fieldset>
+						<div class="form-group">
+							<label form="nome">Nome Completo</label>
+							<input type="text" class ="form-control" id="nome" name="nome" autofocus required>
+						</div>
+						<div class="form-group">
+							<label form="login">Usuário</label>
+							<input type="text" class ="form-control" id="login" name="login" required>
+						</div>
+						<div class="form-group">
+							<label form="senha1">Senha</label>
+							<input type="password" class ="form-control" id="senha1" name="senha1" required>
+						</div>
+						<div class="form-group">
+							<label form="senha2">Repita a senha</label>
+							<input type="password" class ="form-control" id="senha2" name="senha2" required>
+						</div>
+					</fieldset>
+				</div>
+			<input type="submit" class="btn btn-primary" value="Confirmar" />
+			</form>
+		</div>
+		</div>
+	</body>
+	</html>
