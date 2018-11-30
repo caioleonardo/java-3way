@@ -6,12 +6,45 @@
 <h:head>
 	<title>Plataforma!</title>
 </h:head>
-<div align="center">
-<h:form>
-<p:messages id="messages" autoUpdate="true"></p:messages>
-<p:galleria value="#{imagesView.images}" var="image" panelWidth="500" panelHeight="313" showCaption="true">
-    <p:graphicImage name="imagens/#{image}" alt="Image Description for #{image}" title="#{image}"/>
-</p:galleria>
-</h:form>
-</div>
+<h:body>
+	<h:form>
+		<p:growl id="growl" showDetail="true" life="2000" />
+		<p:messages id="messages" autoUpdate="true" />
+		<div align="center">
+			<h:panelGrid columns="1" style="margin-bottom:10px" cellpadding="5">
+				<h:outputText value="Escolha a plataforma:" />
+				<p:selectOneButton value="#{imagesView.images}">
+					<f:selectItem itemLabel="Nature" itemValue="Nature" />
+					<f:selectItem itemLabel="PS4" itemValue="PS4" />
+					<f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+					<p:ajax update="@form"/>
+				</p:selectOneButton>
+			</h:panelGrid>
+		</div>
+		<div align="center">
+			<p:commandButton value="Selecionar" update="imagens, growl"
+				icon="ui-icon-check" />
+			<p:spacer />
+		</div>
+		<div align="center">
+			<p:galleria id="imagens" value="#{imagesView.images}" var="image"
+				panelWidth="500" panelHeight="313" showCaption="true"
+				effectSpeed="500">
+				<p:graphicImage name="/imagens/#{image}"
+					alt="Descrição do Jogo #{image}" title="#{image}" />
+			</p:galleria>
+		</div>
+	</h:form>
+
+	<!--   <div align="center">
+		<h:form>
+			<p:messages id="messages" autoUpdate="true"></p:messages>
+			<p:galleria value="#{imagesView.images}" var="image" panelWidth="500"
+				panelHeight="313" showCaption="true">
+				<p:graphicImage name="imagens/#{image}"
+					alt="Image Description for #{image}" title="#{image}" />
+			</p:galleria>
+		</h:form>
+	</div> -->
+</h:body>
 </html>
